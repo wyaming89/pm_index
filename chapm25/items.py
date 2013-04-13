@@ -5,7 +5,7 @@
 
 from scrapy.item import Item, Field
 
-class chapmItem(Item):
+class chapm25Item(Item):
     date = Field()
     time = Field()
     city = Field()
