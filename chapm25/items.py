@@ -10,10 +10,14 @@ class chapm25Item(Item):
     time = Field()
     city = Field()
     staname=Field()
-    pm25=Field()
-    pm25_index=Field()
-    pm10=Field()
-    pm10_index=Field()
+    pm25_rt=Field()
+    pm25_24=Field()
+    pm25_index_rt=Field()
+    pm25_index_24=Field()
+    pm10_rt=Field()
+    pm10_24=Field()
+    pm10_index_rt=Field()
+    pm10_index_24=Field()
     # define the fields for your item here like:
     # name = Field()
 
