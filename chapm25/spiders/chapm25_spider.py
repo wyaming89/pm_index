@@ -70,7 +70,8 @@ class Chapm25Spider(CrawlSpider):
         chapm['pm10_index_rt'] = hxs.select('//table[@class="table table-hover"]/tbody/tr[4]/td[2]/span/text()').re('(\d+)')
         chapm['pm10_index_24'] = hxs.select('//table[@class="table table-hover"]/tbody/tr[4]/td[3]/span/text()').re('(\d+)')
         #chapm['city']=hxs.select('//ul/li[@class="active"]/a/text()').extract()
-    
+        chapm['time'] = hxs.select('//footer').re('(\d+:\d+:\d+)')
+        chapm['date'] = hxs.select('//footer').re('(\d+-\d+-\d+)')
         chapm['city']=hxs.select('//title').re('(\w+)PM2.5')
         
         return chapm
